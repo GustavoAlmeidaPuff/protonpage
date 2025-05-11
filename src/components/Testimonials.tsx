@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useRef, useState } from 'react';
-import React from 'react';
+import { useState } from 'react';
 
 interface TestimonialProps {
   name: string;

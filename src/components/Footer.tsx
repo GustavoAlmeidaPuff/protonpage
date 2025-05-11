@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
