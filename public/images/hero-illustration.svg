@@ -1,0 +1,60 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background elements -->
+  <circle cx="300" cy="220" r="170" fill="#0A2540" fill-opacity="0.5"/>
+  <circle cx="300" cy="220" r="120" fill="#111827" fill-opacity="0.7"/>
+  
+  <!-- Grid effect -->
+  <path d="M130 120L470 120" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M130 160L470 160" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M130 200L470 200" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M130 240L470 240" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M130 280L470 280" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M130 320L470 320" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  
+  <path d="M180 100L180 340" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M230 100L230 340" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M280 100L280 340" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M330 100L330 340" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M380 100L380 340" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M430 100L430 340" stroke="#00C3FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  
+  <!-- Abstract data visualization -->
+  <path d="M200 300L250 240L300 260L350 180L400 220" stroke="#00E6BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="200" cy="300" r="6" fill="#00E6BC"/>
+  <circle cx="250" cy="240" r="6" fill="#00E6BC"/>
+  <circle cx="300" cy="260" r="6" fill="#00E6BC"/>
+  <circle cx="350" cy="180" r="6" fill="#00E6BC"/>
+  <circle cx="400" cy="220" r="6" fill="#00E6BC"/>
+  
+  <!-- Device frame -->
+  <rect x="220" y="100" width="160" height="240" rx="12" fill="#0A2540" stroke="#00C3FF" stroke-width="2"/>
+  <rect x="230" y="120" width="140" height="200" rx="6" fill="#1A2C44"/>
+  
+  <!-- App interface elements -->
+  <rect x="245" y="135" width="110" height="20" rx="4" fill="#00C3FF" fill-opacity="0.3"/>
+  <rect x="245" y="165" width="50" height="10" rx="2" fill="#00C3FF" fill-opacity="0.6"/>
+  <rect x="245" y="185" width="110" height="10" rx="2" fill="#00C3FF" fill-opacity="0.2"/>
+  <rect x="245" y="205" width="110" height="10" rx="2" fill="#00C3FF" fill-opacity="0.2"/>
+  <rect x="245" y="225" width="110" height="10" rx="2" fill="#00C3FF" fill-opacity="0.2"/>
+  
+  <rect x="245" y="245" width="50" height="50" rx="6" fill="#00C3FF" fill-opacity="0.3"/>
+  <rect x="305" y="245" width="50" height="50" rx="6" fill="#00E6BC" fill-opacity="0.3"/>
+  
+  <!-- Particles -->
+  <circle cx="150" cy="150" r="8" fill="#00C3FF" fill-opacity="0.5"/>
+  <circle cx="160" cy="200" r="5" fill="#00E6BC" fill-opacity="0.6"/>
+  <circle cx="180" cy="250" r="7" fill="#00C3FF" fill-opacity="0.4"/>
+  
+  <circle cx="450" cy="150" r="8" fill="#00C3FF" fill-opacity="0.5"/>
+  <circle cx="440" cy="200" r="5" fill="#00E6BC" fill-opacity="0.6"/>
+  <circle cx="420" cy="250" r="7" fill="#00C3FF" fill-opacity="0.4"/>
+  
+  <!-- Abstract code lines -->
+  <rect x="420" y="130" width="60" height="6" rx="3" fill="#00C3FF" fill-opacity="0.7"/>
+  <rect x="440" y="142" width="40" height="6" rx="3" fill="#00C3FF" fill-opacity="0.5"/>
+  <rect x="450" y="154" width="30" height="6" rx="3" fill="#00C3FF" fill-opacity="0.3"/>
+  
+  <rect x="120" y="130" width="60" height="6" rx="3" fill="#00C3FF" fill-opacity="0.7"/>
+  <rect x="120" y="142" width="40" height="6" rx="3" fill="#00C3FF" fill-opacity="0.5"/>
+  <rect x="120" y="154" width="30" height="6" rx="3" fill="#00C3FF" fill-opacity="0.3"/>
+</svg> 

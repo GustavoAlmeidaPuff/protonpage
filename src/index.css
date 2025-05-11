@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-light font-sans;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-secondary to-accent text-white font-medium py-3 px-6 rounded-lg 
+           shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out 
+           hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50;
+  }
+
+  .btn-secondary {
+    @apply border border-secondary bg-transparent text-secondary font-medium py-3 px-6 rounded-lg 
+           hover:bg-secondary/10 transition-all duration-300 ease-in-out focus:outline-none 
+           focus:ring-2 focus:ring-secondary focus:ring-opacity-50;
+  }
+
+  .card {
+    @apply bg-dark/60 backdrop-blur-sm border border-gray-700/30 rounded-xl p-6 shadow-xl;
+  }
+
+  .card-hover {
+    @apply hover:border-secondary/50 hover:shadow-secondary/20 transition-all duration-300;
+  }
+
+  .glass-effect {
+    @apply bg-white/5 backdrop-filter backdrop-blur-md border border-white/10 shadow-xl;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-white;
+  }
+
+  .section-subheading {
+    @apply text-xl text-gray-300 max-w-3xl mx-auto mb-12;
+  }
+
+  .glow-text {
+    @apply text-secondary text-opacity-90 drop-shadow-[0_0_6px_rgba(0,195,255,0.5)];
+  }
+}
