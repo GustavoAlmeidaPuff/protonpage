@@ -44,7 +44,7 @@ const Products = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 md:p-10">
               {/* Conteúdo lado esquerdo */}
               <motion.div
-                className="flex flex-col justify-center"
+                className="flex flex-col justify-center mb-0 md:mb-0"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: inView ? 0 : -50, opacity: inView ? 1 : 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
@@ -58,9 +58,9 @@ const Products = () => {
                   <h3 className="text-2xl font-bold text-white">Bibliotech</h3>
                 </div>
                 
-                <h4 className="text-xl font-semibold mb-6 text-secondary">Sistema de Gestão de Bibliotecas Escolares</h4>
+                <h4 className="text-xl font-semibold mb-4 md:mb-6 text-secondary">Sistema de Gestão de Bibliotecas Escolares</h4>
                 
-                <div className="text-gray-300 space-y-4">
+                <div className="text-gray-300 space-y-3 md:space-y-4">
                   <p>
                     O Bibliotech é um sistema moderno para gerenciamento de bibliotecas escolares que vai além do simples controle de acervo e empréstimos.
                   </p>
@@ -68,9 +68,9 @@ const Products = () => {
                     Com foco em métricas e desempenho, ajudamos escolas a investirem nos livros certos e motivamos os estudantes através de metas de leitura, criando um sentimento de participação e engajamento.
                   </p>
                   
-                  <div className="pt-2">
-                    <h5 className="text-lg font-semibold mb-3 text-white">Principais funcionalidades:</h5>
-                    <ul className="space-y-2">
+                  <div className="pt-1 md:pt-2">
+                    <h5 className="text-lg font-semibold mb-2 md:mb-3 text-white">Principais funcionalidades:</h5>
+                    <ul className="space-y-1 md:space-y-2">
                       <li className="flex items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -99,7 +99,7 @@ const Products = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8">
+                <div className="mt-6 md:mt-8">
                   <motion.a 
                     href="https://bibliotech.tech" 
                     target="_blank" 
@@ -116,19 +116,19 @@ const Products = () => {
                 </div>
               </motion.div>
               
-              {/* Imagens lado direito */}
+              {/* Imagens lado direito em telas médias e grandes, mensagem em telas pequenas */}
               <motion.div
-                className="relative h-[450px] md:h-[520px] overflow-visible"
+                className="relative h-[140px] md:h-[520px] overflow-visible mt-2 md:mt-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: inView ? 1 : 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
               >
-                {/* Efeito de luz/glowing */}
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-full blur-3xl opacity-20 z-0"></div>
+                {/* Efeito de luz/glowing - visível apenas em telas médias e grandes */}
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-full blur-3xl opacity-20 z-0 hidden md:block"></div>
                 
                 {/* Container relativo para posicionamento absoluto */}
-                <div className="absolute inset-0">
-                  {/* Notebook */}
+                <div className="absolute inset-0 hidden md:block">
+                  {/* Notebook - visível apenas em telas médias e grandes */}
                   <motion.div
                     className="absolute top-0 md:top-5 left-0 md:-left-20 lg:-left-24 z-10"
                     initial={{ y: 20 }}
@@ -150,7 +150,7 @@ const Products = () => {
                     />
                   </motion.div>
                   
-                  {/* Celular */}
+                  {/* Celular - visível apenas em telas médias e grandes */}
                   <motion.div
                     className="absolute bottom-5 md:bottom-0 right-0 md:right-4 lg:right-0 z-20 max-w-[120px] md:max-w-[170px]"
                     initial={{ y: -10 }}
@@ -171,6 +171,16 @@ const Products = () => {
                       }}
                     />
                   </motion.div>
+                </div>
+                
+                {/* Mensagem para telas pequenas */}
+                <div className="md:hidden flex items-center justify-center h-full">
+                  <div className="text-center p-4 border border-secondary/30 rounded-lg bg-dark/50 w-full max-w-xs mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-secondary mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-gray-300 text-sm">Visualize em um dispositivo maior para ver a interface do sistema</p>
+                  </div>
                 </div>
               </motion.div>
             </div>
