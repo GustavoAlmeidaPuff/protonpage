@@ -55,4 +55,22 @@
   .glow-text {
     @apply text-secondary text-opacity-90 drop-shadow-[0_0_6px_rgba(0,195,255,0.5)];
   }
+  
+  .glow-text-subtle {
+    @apply text-white drop-shadow-[0_0_4px_rgba(0,195,255,0.3)];
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 15px rgba(0, 195, 255, 0.3), 
+                0 0 30px rgba(0, 195, 255, 0.1);
+  }
+  
+  .featured-card {
+    @apply relative z-10;
+  }
+  
+  .featured-card::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-xl blur opacity-75 z-[-1];
+  }
 }

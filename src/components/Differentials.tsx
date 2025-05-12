@@ -43,15 +43,6 @@ const Differentials = () => {
   
   const differentials = [
     {
-      title: "Equipe Especializada",
-      description: "Profissionais altamente qualificados e especializados em diversas tecnologias, prontos para enfrentar qualquer desafio.",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      )
-    },
-    {
       title: "Metodologia Ágil",
       description: "Utilizamos Scrum e Kanban para garantir entregas rápidas, contínuas e com alta qualidade, mantendo total transparência.",
       icon: (
@@ -88,11 +79,11 @@ const Differentials = () => {
       )
     },
     {
-      title: "Segurança Avançada",
-      description: "Implementamos as melhores práticas de segurança da informação, protegendo seus dados e a privacidade dos seus usuários.",
+      title: "Além dos Construtores de Sites",
+      description: "Diferente dos construtores de sites genéricos, oferecemos soluções totalmente personalizáveis, com maior flexibilidade para adaptações futuras, suporte humanizado, design exclusivo e estratégias de marketing digital integradas.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       )
     }
@@ -132,7 +123,7 @@ const Differentials = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-          {differentials.map((differential, index) => (
+          {differentials.slice(0, 4).map((differential, index) => (
             <DifferentialItem
               key={index}
               title={differential.title}
@@ -142,6 +133,34 @@ const Differentials = () => {
             />
           ))}
         </div>
+        
+        {/* Destacando o diferencial "Além dos Construtores de Sites" */}
+        <motion.div
+          className="mt-16 mb-8 relative mx-auto max-w-3xl"
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          {/* Efeito de luz sutil */}
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-secondary/10 to-transparent rounded-xl blur-xl"></div>
+          <div className="absolute -inset-1 -z-10 bg-gradient-to-b from-transparent via-accent/10 to-transparent rounded-xl blur-md"></div>
+          
+          <div className="card p-8 border border-secondary/30 backdrop-blur-sm featured-card">
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-4">
+                <div className="bg-gradient-to-br from-secondary to-accent rounded-full w-20 h-20 flex items-center justify-center text-white shadow-glow">
+                  <div className="w-10 h-10">
+                    {differentials[4].icon}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-4 glow-text">{differentials[4].title}</h3>
+                <p className="text-gray-300 max-w-2xl">{differentials[4].description}</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
         
         <motion.div
           className="mt-20 p-8 md:p-12 card border border-secondary/20"

@@ -54,7 +54,6 @@ const Footer = () => {
               <li><a href="#sobre" className="text-gray-300 hover:text-secondary transition-colors">Sobre nós</a></li>
               <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">Serviços</a></li>
               <li><a href="#diferenciais" className="text-gray-300 hover:text-secondary transition-colors">Diferenciais</a></li>
-              <li><a href="#depoimentos" className="text-gray-300 hover:text-secondary transition-colors">Depoimentos</a></li>
               <li><a href="#contato" className="text-gray-300 hover:text-secondary transition-colors">Contato</a></li>
             </ul>
           </div>
@@ -65,9 +64,9 @@ const Footer = () => {
               <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">Desenvolvimento Web</a></li>
               <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">Aplicativos Móveis</a></li>
               <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">Sistemas Empresariais</a></li>
-              <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">Inteligência Artificial</a></li>
               <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">UX/UI Design</a></li>
               <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">Consultoria Tecnológica</a></li>
+              <li><a href="#servicos" className="text-gray-300 hover:text-secondary transition-colors">Outros Projetos</a></li>
             </ul>
           </div>
           
