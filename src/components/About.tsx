@@ -90,14 +90,27 @@ const About = () => {
             </div>
             <div className="bg-gradient-to-br from-primary via-dark to-primary h-full min-h-[300px] relative overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
-                <img 
-                  src="/images/team-photo.jpg" 
-                  alt="Equipe Proton Software" 
-                  className="w-full h-full object-cover opacity-70 mix-blend-overlay"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://via.placeholder.com/800x600/0a2540/00c3ff?text=Nossa+Equipe";
-                  }}
-                />
+                <div className="w-full h-full bg-dark/70 flex items-center justify-center relative">
+                  {/* Faixa diagonal */}
+                  <div 
+                    className="absolute w-[150%] h-[70px] bg-gradient-to-r from-secondary/90 via-secondary to-accent/90 rotate-[-20deg] flex items-center justify-center shadow-lg border-y border-white/20"
+                    style={{ 
+                      backgroundSize: "200% 100%",
+                      animation: "gradientAnimation 3s ease-in-out infinite alternate"
+                    }}
+                  >
+                    <div className="flex flex-col items-center justify-center">
+                      <span className="text-white text-2xl font-bold drop-shadow-md">Em breve</span>
+                      <span className="text-white/90 text-sm mt-1">foto da equipe!</span>
+                    </div>
+                  </div>
+                  
+                  {/* Elementos decorativos */}
+                  <div className="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-secondary/10"></div>
+                  <div className="absolute bottom-1/3 right-1/4 w-20 h-20 rounded-full bg-accent/10"></div>
+                  <div className="absolute bottom-1/4 left-1/3 w-12 h-12 rounded-full bg-secondary/5"></div>
+                  <div className="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-accent/5"></div>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
               </div>
             </div>

@@ -79,17 +79,15 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 mt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Proton Software. Todos os direitos reservados.
-          </p>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-gray-400 hover:text-secondary transition-colors">Política de Privacidade</a>
-            <a href="#" className="text-gray-400 hover:text-secondary transition-colors">Termos de Uso</a>
+        <div className="pt-8 mt-10 border-t border-gray-800 relative px-4">
+          <div className="flex justify-center items-center py-4">
+            <p className="text-gray-400 text-sm text-center">
+              &copy; {new Date().getFullYear()} Proton Software. Todos os direitos reservados.
+            </p>
           </div>
           <motion.button
             onClick={scrollToTop}
-            className="bg-secondary/10 hover:bg-secondary/20 p-3 rounded-full text-secondary transition-colors"
+            className="bg-secondary/10 hover:bg-secondary/20 p-3 rounded-full text-secondary transition-colors absolute md:right-4 right-2 top-1/2 transform -translate-y-1/2"
             whileHover={{ y: -5 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Voltar ao topo"

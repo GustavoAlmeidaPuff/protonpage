@@ -74,3 +74,16 @@
     @apply absolute -inset-0.5 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-xl blur opacity-75 z-[-1];
   }
 }
+
+/* Animações */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
