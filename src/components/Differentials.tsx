@@ -18,9 +18,13 @@ const DifferentialItem = ({ title, description, icon, index }: DifferentialItemP
     <motion.div
       ref={ref}
       className="flex gap-6"
-      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      initial={{ x: index % 2 === 0 ? -50 : 50 }}
+      animate={{ x: inView ? 0 : (index % 2 === 0 ? -50 : 50) }}
+      transition={{ 
+        duration: 0.5, 
+        delay: index * 0.1,
+        ease: "easeOut"
+      }}
     >
       <div className="flex-shrink-0">
         <div className="bg-gradient-to-br from-secondary to-accent rounded-full w-14 h-14 flex items-center justify-center text-white">
@@ -112,9 +116,12 @@ const Differentials = () => {
       <div ref={sectionRef} className="container-section relative z-10">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+          initial={{ y: 30 }}
+          animate={{ y: inView ? 0 : 30 }}
+          transition={{ 
+            duration: 0.6,
+            ease: "easeOut"
+          }}
         >
           <h2 className="section-heading">Por Que <span className="glow-text">Escolher-nos</span></h2>
           <p className="section-subheading">
@@ -137,9 +144,13 @@ const Differentials = () => {
         {/* Destacando o diferencial "Além dos Construtores de Sites" */}
         <motion.div
           className="mt-16 mb-8 relative mx-auto max-w-3xl"
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ y: 50 }}
+          animate={{ y: inView ? 0 : 50 }}
+          transition={{ 
+            duration: 0.8, 
+            delay: 0.4,
+            ease: "easeOut"
+          }}
         >
           {/* Efeito de luz sutil */}
           <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-secondary/5 to-transparent rounded-xl blur-xl"></div>
@@ -164,9 +175,13 @@ const Differentials = () => {
         
         <motion.div
           className="mt-20 p-8 md:p-12 card border border-secondary/20"
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
+          initial={{ y: 50 }}
+          animate={{ y: inView ? 0 : 50 }}
+          transition={{ 
+            duration: 0.7, 
+            delay: 0.5,
+            ease: "easeOut"
+          }}
         >
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="lg:w-2/3">

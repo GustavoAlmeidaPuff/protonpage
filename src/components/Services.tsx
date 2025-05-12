@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from 'react';
 
 interface ServiceItemProps {
   title: string;
@@ -8,44 +7,25 @@ interface ServiceItemProps {
   index: number;
 }
 
-const ServiceItem = ({ title, description, icon, index }: ServiceItemProps) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-  
+const ServiceItem = ({ title, description, icon }: ServiceItemProps) => {
   return (
-    <motion.div
-      ref={ref}
-      className="card card-hover group"
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
+    <div className="card card-hover group">
       <div className="overflow-hidden mb-6">
-        <motion.div 
-          className="bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg p-4 w-16 h-16 flex items-center justify-center
-                    group-hover:from-secondary group-hover:to-accent transition-all duration-300"
-          whileHover={{ scale: 1.05, rotate: 5 }}
-        >
+        <div className="bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg p-4 w-16 h-16 flex items-center justify-center
+                    group-hover:from-secondary group-hover:to-accent transition-all duration-300">
           <div className="text-secondary group-hover:text-white transition-colors duration-300">
             {icon}
           </div>
-        </motion.div>
+        </div>
       </div>
       
       <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-secondary transition-colors duration-300">{title}</h3>
       <p className="text-gray-300">{description}</p>
-    </motion.div>
+    </div>
   );
 };
 
 const Services = () => {
-  const [sectionRef, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-  
   const services = [
     {
       title: "Desenvolvimento Web",
@@ -120,18 +100,13 @@ const Services = () => {
         </svg>
       </div>
       
-      <div ref={sectionRef} className="container-section relative z-10">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
+      <div className="container-section relative z-10">
+        <div className="text-center mb-16">
           <h2 className="section-heading">Nossos <span className="glow-text">Serviços</span></h2>
           <p className="section-subheading">
             Oferecemos um conjunto completo de soluções tecnológicas para impulsionar e transformar o seu negócio.
           </p>
-        </motion.div>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
@@ -145,19 +120,14 @@ const Services = () => {
           ))}
         </div>
         
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
+        <div className="mt-16 text-center">
           <a href="#contato" className="btn-primary inline-flex items-center gap-2">
             Solicitar orçamento
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

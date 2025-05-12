@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import React from 'react';
 
 interface ValueItemProps {
@@ -9,35 +7,19 @@ interface ValueItemProps {
   delay: number;
 }
 
-const ValueItem = ({ title, description, icon, delay }: ValueItemProps) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-  
+const ValueItem = ({ title, description, icon }: ValueItemProps) => {
   return (
-    <motion.div
-      ref={ref}
-      className="card card-hover"
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: delay }}
-    >
+    <div className="card card-hover">
       <div className="bg-gradient-to-br from-secondary to-accent rounded-full w-12 h-12 flex items-center justify-center mb-4">
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
       <p className="text-gray-300">{description}</p>
-    </motion.div>
+    </div>
   );
 };
 
 const About = () => {
-  const [sectionRef, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-  
   return (
     <section id="sobre" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -46,18 +28,13 @@ const About = () => {
         <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-accent/20 rounded-full filter blur-3xl"></div>
       </div>
       
-      <div ref={sectionRef} className="container-section relative z-10">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
+      <div className="container-section relative z-10">
+        <div className="text-center mb-16">
           <h2 className="section-heading">Sobre <span className="glow-text">Nós</span></h2>
           <p className="section-subheading">
             Somos uma equipe de desenvolvimento de software apaixonada por criar soluções inovadoras que impulsionam o sucesso do seu negócio.
           </p>
-        </motion.div>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ValueItem
@@ -95,12 +72,7 @@ const About = () => {
           />
         </div>
         
-        <motion.div
-          className="mt-20 bg-dark/60 backdrop-blur-sm border border-gray-700/30 rounded-xl overflow-hidden"
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-        >
+        <div className="mt-20 bg-dark/60 backdrop-blur-sm border border-gray-700/30 rounded-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 lg:p-12">
               <h3 className="text-2xl font-bold mb-6 text-white">Nossa história</h3>
@@ -130,7 +102,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
