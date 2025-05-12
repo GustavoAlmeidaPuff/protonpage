@@ -31,9 +31,9 @@ const Header = () => {
             transition={{ duration: 0.5 }}
           >
             <img 
-              src="/images/proton-logo.svg" 
+              src="/images/logo sem nome (sem fundo).png" 
               alt="Proton Software" 
-              className="h-10"
+              className="h-14"
               onError={(e) => {
                 e.currentTarget.src = "https://via.placeholder.com/40x40/00c3ff/ffffff?text=P";
               }}
