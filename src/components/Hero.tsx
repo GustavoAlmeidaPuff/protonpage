@@ -1,7 +1,20 @@
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  // Estado para controlar a animação contínua
+  const [reduceAnimations, setReduceAnimations] = useState(false);
+
+  // Após 5 segundos, reduzimos as animações para evitar o carregamento infinito
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setReduceAnimations(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section id="inicio" className="min-h-screen pt-24 pb-16 relative overflow-hidden flex items-center">
       {/* Background Elements */}
@@ -10,8 +23,8 @@ const Hero = () => {
         <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-full filter blur-3xl opacity-20 transform translate-x-1/4 -translate-y-1/4"></div>
         <div className="absolute bottom-0 left-0 w-2/3 h-2/3 bg-gradient-to-tr from-purple-500/10 to-secondary/20 rounded-full filter blur-3xl opacity-20 transform -translate-x-1/4 translate-y-1/4"></div>
         
-        {/* Animated particles */}
-        {[...Array(6)].map((_, i) => (
+        {/* Animated particles - limitados para evitar loop infinito */}
+        {!reduceAnimations && [...Array(6)].map((_, i) => (
           <motion.div 
             key={i}
             className="absolute w-32 h-32 rounded-full bg-secondary/20 filter blur-xl"
@@ -24,21 +37,32 @@ const Hero = () => {
             animate={{ 
               x: [
                 Math.random() * 100 - 50 + "%", 
-                Math.random() * 100 - 50 + "%", 
                 Math.random() * 100 - 50 + "%"
               ],
               y: [
-                Math.random() * 100 - 50 + "%", 
                 Math.random() * 100 - 50 + "%", 
                 Math.random() * 100 - 50 + "%"
               ],
               opacity: [Math.random() * 0.3 + 0.1, Math.random() * 0.3 + 0.1]
             }}
             transition={{ 
-              repeat: Infinity, 
+              repeat: reduceAnimations ? 0 : 1, 
               repeatType: "reverse", 
-              duration: Math.random() * 10 + 20,
+              duration: Math.random() * 5 + 5,
               ease: "easeInOut" 
+            }}
+          />
+        ))}
+        
+        {/* Partículas estáticas para substituir as animadas quando reduceAnimations for verdadeiro */}
+        {reduceAnimations && [...Array(6)].map((_, i) => (
+          <div 
+            key={i}
+            className="absolute w-32 h-32 rounded-full bg-secondary/20 filter blur-xl"
+            style={{ 
+              left: `${Math.random() * 80 + 10}%`, 
+              top: `${Math.random() * 80 + 10}%`, 
+              opacity: Math.random() * 0.3 + 0.1
             }}
           />
         ))}
@@ -105,11 +129,15 @@ const Hero = () => {
                 }}
               />
               
-              {/* Floating elements */}
+              {/* Floating elements - com animações leves */}
               <motion.div 
                 className="absolute top-0 right-0 bg-gradient-to-r from-secondary to-accent rounded-full w-16 h-16 flex items-center justify-center text-white"
-                animate={{ y: [0, -15, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                animate={{ y: reduceAnimations ? 0 : [0, -10, 0] }}
+                transition={{ 
+                  repeat: reduceAnimations ? 0 : 2, 
+                  duration: 2,
+                  ease: "easeInOut" 
+                }}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -117,20 +145,29 @@ const Hero = () => {
               </motion.div>
               
               <motion.div 
-                className="absolute bottom-10 left-10 glass-effect rounded-xl p-4 w-40"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="absolute bottom-10 left-10 glass-effect rounded-xl p-4 w-64"
+                animate={{ y: reduceAnimations ? 0 : [0, 8, 0] }}
+                transition={{ 
+                  repeat: reduceAnimations ? 0 : 2, 
+                  duration: 2.5,
+                  ease: "easeInOut" 
+                }}
               >
                 <div className="flex items-center gap-2">
                   <div className="bg-green-400 rounded-full w-3 h-3"></div>
-                  <p className="text-xs text-white font-medium">100% Seguro</p>
+                  <p className="text-xs text-white font-medium">Soluções benéficas para você</p>
                 </div>
               </motion.div>
               
               <motion.div 
                 className="absolute top-1/3 left-0 glass-effect rounded-xl p-4 w-40"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
+                animate={{ y: reduceAnimations ? 0 : [0, -8, 0] }}
+                transition={{ 
+                  repeat: reduceAnimations ? 0 : 2, 
+                  duration: 2.2,
+                  ease: "easeInOut", 
+                  delay: 0.3 
+                }}
               >
                 <div className="flex items-center gap-2">
                   <div className="bg-blue-400 rounded-full w-3 h-3"></div>

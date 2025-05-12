@@ -60,7 +60,6 @@ const Header = () => {
           <a href="#sobre" className="text-white hover:text-secondary transition-colors">Sobre nós</a>
           <a href="#servicos" className="text-white hover:text-secondary transition-colors">Serviços</a>
           <a href="#diferenciais" className="text-white hover:text-secondary transition-colors">Diferenciais</a>
-          <a href="#depoimentos" className="text-white hover:text-secondary transition-colors">Depoimentos</a>
           <a href="#contato" className="btn-primary">Contato</a>
         </motion.nav>
 
@@ -103,7 +102,6 @@ const Header = () => {
             <a href="#sobre" className="text-white py-2 border-b border-gray-800">Sobre nós</a>
             <a href="#servicos" className="text-white py-2 border-b border-gray-800">Serviços</a>
             <a href="#diferenciais" className="text-white py-2 border-b border-gray-800">Diferenciais</a>
-            <a href="#depoimentos" className="text-white py-2 border-b border-gray-800">Depoimentos</a>
             <a href="#contato" className="btn-primary text-center mt-2">Contato</a>
           </div>
         </motion.div>

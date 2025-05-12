@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaArrowUp } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -39,19 +39,10 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                <FaFacebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                <FaTwitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
                 <FaInstagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
                 <FaLinkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                <FaYoutube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -83,10 +74,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">Contato</h3>
             <ul className="space-y-3 text-gray-300">
-              <li>Av. Paulista, 1000 - Bela Vista</li>
-              <li>São Paulo - SP, 01310-100</li>
-              <li className="pt-2">+55 (11) 99999-9999</li>
-              <li className="text-secondary">contato@protonsoftware.com.br</li>
+              <li className="pt-2">+55 51 99945-6935</li>
+              <li className="text-secondary">proton.hello.world@gmail.com</li>
             </ul>
           </div>
         </div>

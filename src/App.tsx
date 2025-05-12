@@ -18,7 +18,9 @@ function App() {
           <About />
           <Services />
           <Differentials />
+          {/* Seção de depoimentos temporariamente removida
           <Testimonials />
+          */}
           <Contact />
         </main>
         <Footer />
