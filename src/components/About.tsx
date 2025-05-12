@@ -62,7 +62,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ValueItem
             title="Missão"
-            description="Desenvolver soluções tecnológicas de excelência que transformem a maneira como empresas e pessoas interagem com o mundo digital."
+            description="Desenvolver soluções tecnológicas inovadoras com foco em sistemas SaaS e software sob demanda, transformando ideias em ferramentas digitais úteis e de impacto positivo para instituições e clientes."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -73,7 +73,7 @@ const About = () => {
           
           <ValueItem
             title="Visão"
-            description="Ser referência no mercado de desenvolvimento de software, reconhecida pela inovação, qualidade e impacto positivo de nossas soluções."
+            description="Consolidar até 2026 uma estrutura organizacional sólida e escalável, operando com profissionalismo e inovação mesmo antes da formalização legal, preparando-nos para atuar consistentemente no mercado."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -85,7 +85,7 @@ const About = () => {
           
           <ValueItem
             title="Valores"
-            description="Excelência, inovação, compromisso, ética, transparência e resultados são os pilares que norteiam todas as nossas ações e relacionamentos."
+            description="Inovação com propósito, qualidade técnica, entrega contínua, proximidade com o cliente, colaboração, transparência e crescimento sustentável são os pilares que direcionam nossas ações."
             icon={
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
