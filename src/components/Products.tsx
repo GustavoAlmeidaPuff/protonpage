@@ -128,49 +128,41 @@ const Products = () => {
                 
                 {/* Container relativo para posicionamento absoluto */}
                 <div className="absolute inset-0 hidden md:block">
-                  {/* Notebook - visível apenas em telas médias e grandes */}
-                  <motion.div
-                    className="absolute top-0 md:top-5 left-0 md:-left-20 lg:-left-24 z-10"
-                    initial={{ y: 20 }}
-                    animate={{ y: inView ? 0 : 20 }}
-                    transition={{ 
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut"
-                    }}
-                  >
-                    <img 
-                      src="/images/bibliotech/notebook com site(sem fundo).png" 
-                      alt="Bibliotech Dashboard" 
-                      className="h-auto w-full max-w-[300px] md:max-w-md object-contain"
-                      onError={(e) => {
-                        e.currentTarget.src = "https://via.placeholder.com/800x500/0a2540/00c3ff?text=Bibliotech+Desktop";
-                      }}
-                    />
-                  </motion.div>
-                  
-                  {/* Celular - visível apenas em telas médias e grandes */}
-                  <motion.div
-                    className="absolute bottom-5 md:bottom-0 right-0 md:right-4 lg:right-0 z-20 max-w-[120px] md:max-w-[170px]"
-                    initial={{ y: -10 }}
-                    animate={{ y: inView ? 0 : -10 }}
-                    transition={{ 
-                      duration: 3,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut"
-                    }}
-                  >
-                    <img 
-                      src="/images/bibliotech/celular com site (sem fundo).png" 
-                      alt="Bibliotech Mobile" 
-                      className="h-auto w-full object-contain"
-                      onError={(e) => {
-                        e.currentTarget.src = "https://via.placeholder.com/400x800/0a2540/00c3ff?text=Bibliotech+Mobile";
-                      }}
-                    />
-                  </motion.div>
+                  <div className="relative h-full w-full flex items-center justify-center">
+                    {/* Notebook - visível apenas em telas médias e grandes, sem animação */}
+                    <motion.div
+                      className="absolute top-1/4 md:left-10 lg:left-0 transform -translate-y-1/3 -translate-x-10 z-10"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: inView ? 1 : 0 }}
+                      transition={{ duration: 0.7 }}
+                    >
+                      <img 
+                        src="/images/bibliotech/notebook com site(sem fundo).png" 
+                        alt="Bibliotech Dashboard" 
+                        className="h-auto w-full max-w-[320px] md:max-w-[380px] lg:max-w-md object-contain"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://via.placeholder.com/800x500/0a2540/00c3ff?text=Bibliotech+Desktop";
+                        }}
+                      />
+                    </motion.div>
+                    
+                    {/* Celular - visível apenas em telas médias e grandes, sem animação */}
+                    <motion.div
+                      className="absolute top-1/2 md:right-10 lg:right-10 transform -translate-y-1/3 translate-x-0 z-20 max-w-[120px] md:max-w-[150px] lg:max-w-[170px]"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: inView ? 1 : 0 }}
+                      transition={{ duration: 0.7, delay: 0.2 }}
+                    >
+                      <img 
+                        src="/images/bibliotech/celular com site (sem fundo).png" 
+                        alt="Bibliotech Mobile" 
+                        className="h-auto w-full object-contain"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://via.placeholder.com/400x800/0a2540/00c3ff?text=Bibliotech+Mobile";
+                        }}
+                      />
+                    </motion.div>
+                  </div>
                 </div>
                 
                 {/* Mensagem para telas pequenas */}
@@ -191,9 +183,7 @@ const Products = () => {
                 <div className="text-gray-400 text-sm">
                   <span>Tecnologias utilizadas:</span>
                   <span className="ml-3 text-secondary">React</span> • 
-                  <span className="mx-1 text-secondary">Node.js</span> • 
-                  <span className="mx-1 text-secondary">MongoDB</span> •
-                  <span className="mx-1 text-secondary">PWA</span>
+                  <span className="mx-1 text-secondary">Firebase</span>
                 </div>
                 <div className="text-gray-400 text-sm flex items-center">
                   <span className="mr-2">Status:</span>
