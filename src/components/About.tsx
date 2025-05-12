@@ -106,13 +106,13 @@ const About = () => {
               <h3 className="text-2xl font-bold mb-6 text-white">Nossa história</h3>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  Fundada em 2015, a Proton Software nasceu da visão de um grupo de desenvolvedores experientes que acreditavam em criar soluções de software verdadeiramente personalizadas e de alta qualidade.
+                  A Proton Software nasceu quando identificamos oportunidades de melhoria em uma solução mal projetada, encontrando um caminho para desenvolver um produto inovador e expansível.
                 </p>
                 <p>
-                  Iniciamos como uma pequena equipe focada em desenvolvimento web e, ao longo dos anos, expandimos nossos serviços para incluir aplicativos móveis, sistemas empresariais, inteligência artificial e muito mais.
+                  Assim surgiu a Bibliotech, nosso sistema de gerenciamento de biblioteca escolar com foco no desempenho de alunos, livros e turmas. Desenvolvemos métricas que ajudam escolas a investirem nos livros certos e motivam os estudantes através de metas trimestrais, criando um sentimento de participação.
                 </p>
                 <p>
-                  Hoje, contamos com uma equipe multidisciplinar de talentos apaixonados por tecnologia e inovação, prontos para transformar desafios em oportunidades através do poder do software.
+                  Paralelamente, expandimos para o desenvolvimento de softwares sob demanda, que atualmente representa nosso principal foco de faturamento, enquanto continuamos evoluindo nossos produtos próprios.
                 </p>
               </div>
             </div>
