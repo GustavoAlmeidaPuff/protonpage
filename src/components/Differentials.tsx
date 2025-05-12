@@ -142,20 +142,20 @@ const Differentials = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           {/* Efeito de luz sutil */}
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-secondary/10 to-transparent rounded-xl blur-xl"></div>
-          <div className="absolute -inset-1 -z-10 bg-gradient-to-b from-transparent via-accent/10 to-transparent rounded-xl blur-md"></div>
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-secondary/5 to-transparent rounded-xl blur-xl"></div>
+          <div className="absolute -inset-1 -z-10 bg-gradient-to-b from-transparent via-accent/5 to-transparent rounded-xl blur-md"></div>
           
-          <div className="card p-8 border border-secondary/30 backdrop-blur-sm featured-card">
+          <div className="card p-8 border border-secondary/20 backdrop-blur-sm">
             <div className="flex flex-col items-center text-center">
               <div className="mb-4">
-                <div className="bg-gradient-to-br from-secondary to-accent rounded-full w-20 h-20 flex items-center justify-center text-white shadow-glow">
-                  <div className="w-10 h-10">
-                    {differentials[4].icon}
-                  </div>
+                <div className="bg-gradient-to-br from-secondary/80 to-accent/80 rounded-full w-16 h-16 flex items-center justify-center text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-semibold mb-4 glow-text">{differentials[4].title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-white">{differentials[4].title}</h3>
                 <p className="text-gray-300 max-w-2xl">{differentials[4].description}</p>
               </div>
             </div>
