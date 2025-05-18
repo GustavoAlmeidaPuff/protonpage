@@ -35,7 +35,7 @@ const Header = () => {
               alt="Proton Software" 
               className="h-14"
               onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/40x40/00c3ff/ffffff?text=P";
+                e.currentTarget.src = "https://placehold.co/40x40/00c3ff/ffffff?text=P";
               }}
             />
           </motion.div>

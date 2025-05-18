@@ -9,11 +9,11 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = 'Proton Software | Soluções Digitais Inovadoras',
-  description = 'Transformando ideias em soluções digitais inovadoras. Especialistas em desenvolvimento de software, aplicativos e sistemas empresariais.',
-  keywords = 'desenvolvimento de software, aplicativos móveis, sistemas empresariais, inteligência artificial, tecnologia, desenvolvimento web, consultoria em TI, soluções digitais, inovação tecnológica',
-  ogImage = '/images/logo sem nome (sem fundo).png',
-  ogUrl = 'https://protonsoftware.com.br'
+  title = 'Proton Software | Desenvolvimento de Software Personalizado e Soluções Digitais',
+  description = 'A Proton Software desenvolve sistemas, aplicativos e soluções digitais sob medida para o seu negócio. Inovação, qualidade e tecnologia de ponta. protonsoftware.tech',
+  keywords = 'proton software, desenvolvimento de software, aplicativos móveis, sistemas empresariais, inteligência artificial, tecnologia, desenvolvimento web, consultoria em TI, soluções digitais, inovação tecnológica',
+  ogImage = 'https://protonsoftware.tech/images/logo%20sem%20nome%20(sem%20fundo).png',
+  ogUrl = 'https://protonsoftware.tech'
 }: SEOProps) => {
   return (
     <Helmet>
