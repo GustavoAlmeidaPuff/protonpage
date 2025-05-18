@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://protonsoftware.com.br/sitemap.xml
+
+# Permitir rastreamento de todas as páginas
+Allow: /#about
+Allow: /#services
+Allow: /#products
+Allow: /#contact
+
+# Desabilitar rastreamento de arquivos desnecessários
+Disallow: /images/
+Disallow: /assets/
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /*.xml$ 
