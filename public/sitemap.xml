@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://protonsoftware.com.br/</loc>
+    <loc>https://protonsoftware.tech/</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://protonsoftware.com.br/#about</loc>
+    <loc>https://protonsoftware.tech/#about</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://protonsoftware.com.br/#services</loc>
+    <loc>https://protonsoftware.tech/#services</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://protonsoftware.com.br/#products</loc>
+    <loc>https://protonsoftware.tech/#products</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://protonsoftware.com.br/#contact</loc>
+    <loc>https://protonsoftware.tech/#contact</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

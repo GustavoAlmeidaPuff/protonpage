@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://protonsoftware.com.br/sitemap.xml
+Sitemap: https://protonsoftware.tech/sitemap.xml
 
 # Permitir rastreamento de todas as páginas
 Allow: /#about
