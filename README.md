@@ -10,9 +10,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - [TypeScript](https://www.typescriptlang.org/) - Superset JavaScript tipado
 - [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitário
 - [Framer Motion](https://www.framer.com/motion/) - Biblioteca de animações para React
-- [React Icons](https://react-icons.github.io/react-icons/) - Pacote de ícones populares
-- [React Intersection Observer](https://github.com/thebuilder/react-intersection-observer) - Hook para detecção de elementos na viewport
-
 ## 🔥 Recursos
 
 - Design responsivo para todos os dispositivos

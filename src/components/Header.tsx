@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,14 +31,16 @@ const Header = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img 
-              src="/images/logo sem nome (sem fundo).png" 
-              alt="Proton Software" 
-              className="h-14"
-              onError={(e) => {
-                e.currentTarget.src = "https://placehold.co/40x40/00c3ff/ffffff?text=P";
-              }}
-            />
+            <Link to="/">
+              <img 
+                src="/images/logo sem nome (sem fundo).png" 
+                alt="Proton Software" 
+                className="h-14"
+                onError={(e) => {
+                  e.currentTarget.src = "https://placehold.co/40x40/00c3ff/ffffff?text=P";
+                }}
+              />
+            </Link>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, x: -20 }}
@@ -45,7 +48,9 @@ const Header = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-2xl font-bold text-white"
           >
-            Proton<span className="glow-text">Software</span>
+            <Link to="/">
+              Proton<span className="glow-text">Software</span>
+            </Link>
           </motion.h1>
         </div>
 
@@ -56,10 +61,11 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <a href="#inicio" className="text-white hover:text-secondary transition-colors">Início</a>
+          <Link to="/" className="text-white hover:text-secondary transition-colors">Início</Link>
           <a href="#sobre" className="text-white hover:text-secondary transition-colors">Sobre nós</a>
           <a href="#servicos" className="text-white hover:text-secondary transition-colors">Serviços</a>
           <a href="#produtos" className="text-white hover:text-secondary transition-colors">Produtos</a>
+          <Link to="/catalogo" className="text-white hover:text-secondary transition-colors">Catálogo</Link>
           <a href="#diferenciais" className="text-white hover:text-secondary transition-colors">Diferenciais</a>
           <a href="#contato" className="btn-primary">Contato</a>
         </motion.nav>
@@ -99,10 +105,11 @@ const Header = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="container-section py-5 flex flex-col gap-4">
-            <a href="#inicio" className="text-white py-2 border-b border-gray-800">Início</a>
+            <Link to="/" className="text-white py-2 border-b border-gray-800">Início</Link>
             <a href="#sobre" className="text-white py-2 border-b border-gray-800">Sobre nós</a>
             <a href="#servicos" className="text-white py-2 border-b border-gray-800">Serviços</a>
             <a href="#produtos" className="text-white py-2 border-b border-gray-800">Produtos</a>
+            <Link to="/catalogo" className="text-white py-2 border-b border-gray-800">Catálogo</Link>
             <a href="#diferenciais" className="text-white py-2 border-b border-gray-800">Diferenciais</a>
             <a href="#contato" className="btn-primary text-center mt-2">Contato</a>
           </div>
