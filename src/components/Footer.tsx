@@ -74,7 +74,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">Contato</h3>
             <ul className="space-y-3 text-gray-300">
-              <li className="pt-2">+55 51 99945-6935</li>
+              <li className="pt-2">+55 51 99718-8572</li>
               <li className="text-secondary">proton.hello.world@gmail.com</li>
             </ul>
           </div>

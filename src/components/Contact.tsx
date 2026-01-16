@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Preparar a mensagem para o WhatsApp
-    const whatsappNumber = "5551999456935";
+    const whatsappNumber = "5551997188572";
     const messageText = `*Nome:* ${formState.name}%0A*Assunto:* ${formState.subject}%0A%0A${formState.message}`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${messageText}`;
     
@@ -68,7 +68,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-medium">Telefone</h4>
-                    <p className="text-gray-300">+55 51 99945-6935</p>
+                    <p className="text-gray-300">+55 51 99718-8572</p>
                   </div>
                 </div>
                 
@@ -78,7 +78,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-medium">WhatsApp</h4>
-                    <p className="text-gray-300">+55 51 99945-6935</p>
+                    <p className="text-gray-300">+55 51 99718-8572</p>
                   </div>
                 </div>
                 
